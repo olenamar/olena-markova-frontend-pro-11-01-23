@@ -44,13 +44,10 @@ function changes(user) {
         } else {
             newPeoples.money = 'Не є число';
         }
-        if(Array.isArray(newPeoples.children) && newPeoples.children.length || !newPeoples.children.length){
+        if(Array.isArray(newPeoples.children)){
             newPeoples.children.push({name: 'Stepan', age: Math.round(Math.random() * 18)})
         }
-            for(let j = 0; j < newPeoples.children.length; j++){
-                const children = newPeoples.children[j];
-                children.name = children.name.toUpperCase();
-            }            
+            
     }
     return user;
 }        
